@@ -1,0 +1,246 @@
+
+Private Sub AlisBT_Click()
+
+Dim cocaColaGiris As Integer
+Dim sonSatirCocaCola As Integer
+Dim toplamCocaCola As Integer
+Dim FantaGiris As Integer
+Dim sonSatirFanta As Integer
+Dim toplamFanta As Integer
+Dim spriteGiris As Integer
+Dim sonSatirSprite As Integer
+
+
+sonSatirCocaCola = Cells(Rows.Count, 2).End(xlUp).Row
+If TypeName(CocaColaAlisTB) <> "Integer" Then CocaColaAlisTB = 0
+If CocaColaAlisTB.Text <> "" Then cocaColaGiris = CocaColaAlisTB
+
+
+Cells((sonSatirCocaCola) + 1, 1).Value = cocaColaGiris
+sonSatirCocaCola = Cells(Rows.Count, 1).End(xlUp).Row
+
+For i = 2 To sonSatirCocaCola
+    If Not IsEmpty(Cells(i, 1).Value) Then
+       toplamCocaCola = Cells(i, 1).Value + toplamCocaCola
+      
+      End If
+Next i
+CocaColaAdetLB = toplamCocaCola
+
+sonSatirSprite = Cells(Rows.Count, 2).End(xlUp).Row
+If TypeName(SpriteAlisTB) <> "Integer" Then SpriteAlisTB = 0
+If SpriteAlisTB.Text <> "" Then spriteGiris = SpriteAlisTB
+
+Cells((sonSatirSprite) + 1, 2).Value = spriteGiris
+sonSatirSprite = Cells(Rows.Count, 2).End(xlUp).Row
+For i = 2 To sonSatirSprite
+    If Not IsEmpty(Cells(i, 2).Value) Then
+       toplamSprite = Cells(i, 2).Value + toplamSprite
+       
+      End If
+Next i
+SpriteAdetLB = toplamSprite
+sonSatirFanta = Cells(Rows.Count, 3).End(xlUp).Row
+If TypeName(FantaAlisTB) <> "Integer" Then FantaAlisTB = 0
+If FantaAlisTB.Text <> "" Then FantaGiris = FantaAlisTB
+
+Cells((sonSatirFanta) + 1, 3).Value = FantaGiris
+
+sonSatirFanta = Cells(Rows.Count, 3).End(xlUp).Row
+For i = 2 To sonSatirFanta
+    If Not IsEmpty(Cells(i, 3).Value) Then
+       toplamFanta = Cells(i, 3).Value + toplamFanta
+      
+      End If
+Next
+FantaAdetLB = toplamFanta
+
+Dim SodaGiris As Integer
+Dim sonSatirSoda As Integer
+
+sonSatirSoda = Cells(Rows.Count, 4).End(xlUp).Row
+If TypeName(SodaAlisTB) <> "Integer" Then SodaAlisTB = 0
+If SodaAlisTB.Text <> "" Then SodaGiris = SodaAlisTB
+Cells((sonSatirSoda) + 1, 4).Value = SodaGiris
+sonSatirSoda = Cells(Rows.Count, 4).End(xlUp).Row
+For i = 2 To sonSatirSoda
+    If Not IsEmpty(Cells(i, 4).Value) Then
+       toplamSoda = Cells(i, 4).Value + toplamSoda
+      
+      End If
+Next i
+sodaAdetLB = toplamSoda
+
+Dim biraGiris As Integer
+Dim sonSatirbira As Integer
+Dim toplamBira As Integer
+
+sonSatirbira = Cells(Rows.Count, 5).End(xlUp).Row
+If TypeName(BiraAlisTB) <> "Integer" Then BiraAlisTB = 0
+If BiraAlisTB.Text <> "" Then biraGiris = BiraAlisTB
+Cells((sonSatirbira) + 1, 5).Value = biraGiris
+
+sonSatirbira = Cells(Rows.Count, 5).End(xlUp).Row
+
+For i = 2 To sonSatirbira
+    If Not IsEmpty(Cells(i, 5).Value) Then
+       toplamBira = Cells(i, 5).Value + toplamBira
+      
+      End If
+Next i
+biraAdetLB = toplamBira
+End Sub
+
+
+
+
+Private Sub SatisBT_Click()
+Dim cocaColaGiris As Integer
+Dim sonSatirCocaCola As Integer
+Dim toplamCocaCola As Integer
+Dim spriteGiris As Integer
+Dim sonSatirSprite As Integer
+Dim FantaGiris As Integer
+Dim sonSatirFanta As Integer
+Dim toplamFanta As Integer
+Dim SodaGiris As Integer
+Dim sonSatirSoda As Integer
+Dim toplamSoda As Integer
+Dim biraGiris As Integer
+Dim sonSatirbira As Integer
+Dim toplamBira As Integer
+Dim a As Integer
+
+
+sonSatirCocaCola = Cells(Rows.Count, 1).End(xlUp).Row
+If TypeName(CocaColaAlisTB) <> "Integer" Then CocaColaAlisTB = 0
+If CocaColaAlisTB.Text <> "" Then cocaColaGiris = CocaColaAlisTB
+Cells((sonSatirCocaCola) + 1, 1).Value = cocaColaGiris - (cocaColaGiris * 2)
+
+sonSatirCocaCola = Cells(Rows.Count, 1).End(xlUp).Row
+
+For i = 2 To sonSatirCocaCola
+    If Not IsEmpty(Cells(i, 1).Value) Then
+       toplamCocaCola = Cells(i, 1).Value + toplamCocaCola
+      
+      End If
+Next i
+
+sonSatirSprite = Cells(Rows.Count, 2).End(xlUp).Row
+If TypeName(SpriteAlisTB) <> "Integer" Then SpriteAlisTB = 0
+If SpriteAlisTB.Text <> "" Then spriteGiris = SpriteAlisTB
+Cells((sonSatirSprite) + 1, 2).Value = spriteGiris - (spriteGiris * 2)
+
+sonSatirSprite = Cells(Rows.Count, 2).End(xlUp).Row
+For i = 2 To sonSatirSprite
+    If Not IsEmpty(Cells(i, 2).Value) Then
+       toplamSprite = Cells(i, 2).Value + toplamSprite
+      
+      End If
+Next i
+
+sonSatirFanta = Cells(Rows.Count, 3).End(xlUp).Row
+If TypeName(FantaAlisTB) <> "Integer" Then FantaAlisTB = 0
+If FantaAlisTB.Text <> "" Then FantaGiris = FantaAlisTB
+Cells((sonSatirFanta) + 1, 3).Value = FantaGiris - (FantaGiris * 2)
+
+sonSatirFanta = Cells(Rows.Count, 3).End(xlUp).Row
+For i = 2 To sonSatirFanta
+    If Not IsEmpty(Cells(i, 3).Value) Then
+       toplamFanta = Cells(i, 3).Value + toplamFanta
+      
+      End If
+Next
+FantaAdetLB = toplamFanta
+
+sonSatirSoda = Cells(Rows.Count, 4).End(xlUp).Row
+If TypeName(SodaAlisTB) <> "Integer" Then SodaAlisTB = 0
+If SodaAlisTB.Text <> "" Then SodaGiris = SodaAlisTB
+Cells((sonSatirSoda) + 1, 4).Value = SodaGiris - (SodaGiris * 2)
+
+sonSatirSoda = Cells(Rows.Count, 4).End(xlUp).Row
+
+For i = 2 To sonSatirSoda
+    If Not IsEmpty(Cells(i, 4).Value) Then
+       toplamSoda = Cells(i, 4).Value + toplamSoda
+      
+      End If
+
+Next i
+
+sonSatirbira = Cells(Rows.Count, 5).End(xlUp).Row
+If BiraAlisTB.Text <> "" Then Exit Sub
+biraGiris = Val(BiraAlisTB.Text)
+
+Cells((sonSatirbira) + 1, 5).Value = biraGiris * (-1)
+
+sonSatirbira = Cells(Rows.Count, 5).End(xlUp).Row
+
+For i = 2 To sonSatirbira
+    If Not IsEmpty(Cells(i, 5).Value) Then
+       toplamBira = Cells(i, 5).Value + toplamBira
+      
+      End If
+Next i
+CocaColaAdetLB = toplamCocaCola
+SpriteAdetLB = toplamSprite
+FantaAdetLB = toplamFanta
+sodaAdetLB = toplamSoda
+biraAdetLB = toplamBira
+
+End Sub
+
+Private Sub stoklariGetirBT_Click()
+
+sonSatirCocaCola = Cells(Rows.Count, 1).End(xlUp).Row
+
+For i = 2 To sonSatirCocaCola
+    If Not IsEmpty(Cells(i, 1).Value) Then
+       toplamCocaCola = Cells(i, 1).Value + toplamCocaCola
+      
+      End If
+Next i
+
+sonSatirSprite = Cells(Rows.Count, 2).End(xlUp).Row
+For i = 2 To sonSatirSprite
+    If Not IsEmpty(Cells(i, 2).Value) Then
+       toplamSprite = Cells(i, 2).Value + toplamSprite
+      
+      End If
+Next i
+
+sonSatirFanta = Cells(Rows.Count, 3).End(xlUp).Row
+For i = 2 To sonSatirFanta
+    If Not IsEmpty(Cells(i, 3).Value) Then
+       toplamFanta = Cells(i, 3).Value + toplamFanta
+      
+      End If
+Next
+
+sonSatirSoda = Cells(Rows.Count, 4).End(xlUp).Row
+For i = 2 To sonSatirSoda
+    If Not IsEmpty(Cells(i, 4).Value) Then
+       toplamSoda = Cells(i, 4).Value + toplamSoda
+      
+      End If
+Next i
+
+sonSatirbira = Cells(Rows.Count, 5).End(xlUp).Row
+For i = 2 To sonSatirbira
+    If Not IsEmpty(Cells(i, 5).Value) Then
+       toplamBira = Cells(i, 5).Value + toplamBira
+      
+      End If
+Next i
+
+CocaColaAdetLB = toplamCocaCola
+SpriteAdetLB = toplamSprite
+FantaAdetLB = toplamFanta
+sodaAdetLB = toplamSoda
+biraAdetLB = toplamBira
+End Sub
+
+
+Private Sub UserForm_QueryClose(Cancel As Integer, CloseMode As Integer)
+Application.Visible = True
+End Sub
